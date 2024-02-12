@@ -13,8 +13,8 @@
       @endforeach
     </ul>
 
-    <h3 class="sub-heading">Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia. Eius
-      necessitatibus voluptatem quis labore perspiciatis quia.</h3>
+    <h3 class="sub-heading">Program
+</h3>
 
     <div class="tab-content row justify-content-center">
       @foreach($schedules as $key => $day)
@@ -24,11 +24,10 @@
               <div class="col-md-2"><time>{{ \Carbon\Carbon::parse($schedule->start_time)->format("h:i A") }}</time></div>
               <div class="col-md-10">
                 @if($schedule->speaker)
-                  <div class="speaker">
-                    <img src="{{ $schedule->speaker->photo->getUrl() }}" alt="{{ $schedule->speaker->name }}">
-                  </div>
+                  <h4>{{ $schedule->title }} @if($schedule->speaker)<span>{{ $schedule->speaker->name }}</span>@endif</h4>
+                @else
+                  <h4>{{ $schedule->title }}</h4>
                 @endif
-                <h4>{{ $schedule->title }} @if($schedule->speaker)<span>{{ $schedule->speaker->name }}</span>@endif</h4>
                 <p>{{ $schedule->subtitle }}</p>
               </div>
             </div>

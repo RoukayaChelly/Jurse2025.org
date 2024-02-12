@@ -13,7 +13,7 @@
         <div class="col-lg-3 col-md-6 footer-contact">
           <h4>Contact Us</h4>
           <p>
-          Nektarios Chrysoulakis
+          Mr.
 
            <br>
             <strong>Phone:</strong> +216 96321456
